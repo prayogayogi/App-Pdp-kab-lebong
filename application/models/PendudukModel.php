@@ -51,6 +51,8 @@ class PendudukModel extends CI_Model
 			'jenis_kelamin' => strtoupper($this->input->post('jenis_kelamin')),
 			'alamat' => strtoupper($this->input->post('alamat')),
 			'pekerjaan' => strtoupper($this->input->post('pekerjaan')),
+			'status_keluarga' => $this->input->post('status_keluarga'),
+			'status' => "HIDUP",
 			'tgl_masuk' => date('Y-m-d'),
 		];
 		$this->db->set($data);
@@ -65,7 +67,7 @@ class PendudukModel extends CI_Model
 			'tgl_lahir' => $this->input->post('tgl_lahir'),
 			'no_nik' => $this->input->post('no_nik'),
 			'no_kk' => $this->input->post('no_kk'),
-			'pekerjaan' => $this->input->post('pekerjaan')
+			'pekerjaan' => $this->input->post('pekerjaan'),
 		];
 		$this->db->where('id', $id);
 		$this->db->update('data_penduduk', $data);

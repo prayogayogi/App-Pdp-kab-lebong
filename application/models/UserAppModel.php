@@ -24,7 +24,7 @@ class UserAppModel extends CI_Model
 			'alamat' => strtoupper($this->input->post('alamat')),
 			'foto' => $files,
 			'roles' => $this->input->post('roles'),
-			'password' => password_hash(('admin'), PASSWORD_DEFAULT)
+			'password' => password_hash(('1234'), PASSWORD_DEFAULT)
 		];
 		$this->db->insert('userapp', $data);
 	}

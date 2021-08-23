@@ -21,6 +21,7 @@
 		<!-- Sidebar Menu -->
 		<nav class="mt-2">
 			<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
 				<li class="nav-item has-treeview">
 					<a href="<?= base_url('DashboardController') ?>" class="nav-link  <?= (current_url() == base_url('DashboardController')) ? 'active' : '' ?>">
 						<i class="nav-icon fas fa-tachometer-alt"></i>
@@ -29,129 +30,96 @@
 						</p>
 					</a>
 				</li>
-				<li class="nav-item has-treeview ">
-					<a href="<?= base_url('DataPendudukController') ?>" class="nav-link <?= (current_url() == base_url('DataPendudukController')) ? 'active' : '' ?>">
-						<i class="nav-icon fas fa-book"></i>
-						<p>
-							Data Penduduk
-						</p>
-					</a>
-				</li>
-				<li class="nav-item has-treeview">
-					<a href="<?= base_url('DataKkController') ?>" class="nav-link <?= (current_url() == base_url('DataKkController')) || (current_url() == base_url('DataKkController/ViewAnggotaKeluarga/'))  ? 'active' : '' ?>">
-						<i class="nav-icon fas fa-book-medical"></i>
-						<p>
-							Data Kartu Keluarga
-						</p>
-					</a>
-				</li>
-				<li class="nav-item has-treeview <?= (current_url() == base_url('Sirkulasi/DataLahirController')) || (current_url() == base_url('Sirkulasi/DataMeninggalController')) || (current_url() == base_url('Sirkulasi/DataPendatangController')) || (current_url() == base_url('Sirkulasi/DataPindahController'))  ? 'menu-open ' : '' ?> ">
-					<a href="#" class="nav-link">
-						<i class="nav-icon fas fa-database"></i>
-						<p>
-							Sirkulasi Penduduk
-							<i class="right fas fa-angle-left"></i>
-						</p>
-					</a>
-					<ul class="nav nav-treeview">
-						<li class="nav-item">
-							<a href="<?= base_url('Sirkulasi/DataLahirController') ?>" class="nav-link <?= (current_url() == base_url('Sirkulasi/DataLahirController')) ? 'active' : '' ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Data Lahir</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('Sirkulasi/DataMeninggalController') ?>" class="nav-link <?= (current_url() == base_url('Sirkulasi/DataMeninggalController')) ? 'active' : '' ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Data Meninggal</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('Sirkulasi/DataPendatangController') ?>" class="nav-link <?= (current_url() == base_url('Sirkulasi/DataPendatangController')) ? 'active' : '' ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Data Pendatang</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('Sirkulasi/DataPindahController') ?>" class="nav-link <?= (current_url() == base_url('Sirkulasi/DataPindahController')) ? 'active' : '' ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Data Pindah</p>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="nav-item has-treeview <?= (current_url() == base_url('Laporan/LaporanController')) || (current_url() == base_url('Laporan/LaporanController/dataKk')) || (current_url() == base_url('Laporan/LaporanController/dataLahir')) || (current_url() == base_url('Laporan/LaporanController/dataMeningal')) || (current_url() == base_url('Laporan/LaporanController/dataPendatang')) || (current_url() == base_url('Laporan/LaporanController/dataPindah')) ? 'menu-open' : '' ?>">
-					<a href="#" class="nav-link">
-						<i class="nav-icon fas fa-book"></i>
-						<p>
-							Kelola Laporan
-							<i class="right fas fa-angle-left"></i>
-						</p>
-					</a>
-					<ul class="nav nav-treeview">
-						<li class="nav-item">
-							<a href="<?= base_url('Laporan/LaporanController') ?>" class="nav-link <?= (current_url() == base_url('Laporan/LaporanController')) ? 'active' : '' ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Laporan Penduduk</p>
-							</a>
-						</li>
-						<!-- <li class="nav-item">
-							<a href="<?= base_url('Laporan/LaporanController/dataKk') ?>" class="nav-link <?= (current_url() == base_url('Laporan/LaporanController/dataKk')) ? 'active' : '' ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Data Kartu Keluarga</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('Laporan/LaporanController/dataLahir') ?>" class="nav-link <?= (current_url() == base_url('Laporan/LaporanController/dataLahir')) ? 'active' : '' ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Data Lahir</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('Laporan/LaporanController/dataMeningal') ?>" class="nav-link <?= (current_url() == base_url('Laporan/LaporanController/dataMeningal')) ? 'active' : '' ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Data Meninggal</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('Laporan/LaporanController/dataPendatang') ?>" class="nav-link <?= (current_url() == base_url('Laporan/LaporanController/dataPendatang')) ? 'active' : '' ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Data Pendatang</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a href="<?= base_url('Laporan/LaporanController/dataPindah') ?>" class="nav-link <?= (current_url() == base_url('Laporan/LaporanController/dataPindah')) ? 'active' : '' ?>">
-								<i class="far fa-circle nav-icon"></i>
-								<p>Data Pindah</p>
-							</a>
-						</li> -->
-					</ul>
-				</li>
-				<li class="nav-header">Administrator</li>
-				<li class="nav-item">
-					<a href="<?= base_url('AdministratorController') ?>" class="nav-link <?= (current_url() == base_url('AdministratorController')) ? 'active' : '' ?>">
-						<i class="nav-icon fas fa-user-cog"></i>
-						<p>
-							Administrator
-						</p>
-					</a>
-				</li>
-				<li class="nav-item" style="display: none;">
-					<a href=" <?= base_url('AdministratorController/camat') ?>" class="nav-link <?= (current_url() == base_url('AdministratorController/camat')) ? 'active' : '' ?>">
-						<i class=" nav-icon fas fa-users-cog"></i>
-						<p>
-							Camat
-						</p>
-					</a>
-				</li>
-				<li class="nav-item" style="display: none;">
-					<a href="<?= base_url('AdministratorController/petugas') ?>" class="nav-link">
-						<i class=" nav-icon fas fa-users-cog"></i>
-						<p>
-							Petugas
-						</p>
-					</a>
-				</li>
+
+				<?php if ($userLogin['roles'] == 1 || $userLogin['roles'] == 3) : ?>
+					<li class="nav-item has-treeview ">
+						<a href="<?= base_url('DataPendudukController') ?>" class="nav-link <?= (current_url() == base_url('DataPendudukController')) ? 'active' : '' ?>">
+							<i class="nav-icon fas fa-book"></i>
+							<p>
+								Data Penduduk
+							</p>
+						</a>
+					</li>
+
+					<li class="nav-item has-treeview">
+						<a href="<?= base_url('DataKkController') ?>" class="nav-link <?= (current_url() == base_url('DataKkController')) || (current_url() == base_url('DataKkController/ViewAnggotaKeluarga/'))  ? 'active' : '' ?>">
+							<i class="nav-icon fas fa-book-medical"></i>
+							<p>
+								Data Kartu Keluarga
+							</p>
+						</a>
+					</li>
+				<?php endif; ?>
+
+				<?php if ($userLogin['roles'] == 1 || $userLogin['roles'] == 3) : ?>
+					<li class="nav-item has-treeview <?= (current_url() == base_url('Sirkulasi/DataLahirController')) || (current_url() == base_url('Sirkulasi/DataMeninggalController')) || (current_url() == base_url('Sirkulasi/DataPendatangController')) || (current_url() == base_url('Sirkulasi/DataPindahController'))  ? 'menu-open ' : '' ?> ">
+						<a href="#" class="nav-link">
+							<i class="nav-icon fas fa-database"></i>
+							<p>
+								Sirkulasi Penduduk
+								<i class="right fas fa-angle-left"></i>
+							</p>
+						</a>
+						<ul class="nav nav-treeview">
+							<li class="nav-item">
+								<a href="<?= base_url('Sirkulasi/DataLahirController') ?>" class="nav-link <?= (current_url() == base_url('Sirkulasi/DataLahirController')) ? 'active' : '' ?>">
+									<i class="far fa-circle nav-icon"></i>
+									<p>Data Lahir</p>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="<?= base_url('Sirkulasi/DataMeninggalController') ?>" class="nav-link <?= (current_url() == base_url('Sirkulasi/DataMeninggalController')) ? 'active' : '' ?>">
+									<i class="far fa-circle nav-icon"></i>
+									<p>Data Meninggal</p>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="<?= base_url('Sirkulasi/DataPendatangController') ?>" class="nav-link <?= (current_url() == base_url('Sirkulasi/DataPendatangController')) ? 'active' : '' ?>">
+									<i class="far fa-circle nav-icon"></i>
+									<p>Data Pendatang</p>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="<?= base_url('Sirkulasi/DataPindahController') ?>" class="nav-link <?= (current_url() == base_url('Sirkulasi/DataPindahController')) ? 'active' : '' ?>">
+									<i class="far fa-circle nav-icon"></i>
+									<p>Data Pindah</p>
+								</a>
+							</li>
+						</ul>
+					</li>
+				<?php endif; ?>
+
+				<?php if ($userLogin['roles'] == 1 || $userLogin['roles'] == 2) : ?>
+					<li class="nav-item has-treeview <?= (current_url() == base_url('Laporan/LaporanController')) || (current_url() == base_url('Laporan/LaporanController/dataKk')) || (current_url() == base_url('Laporan/LaporanController/dataLahir')) || (current_url() == base_url('Laporan/LaporanController/dataMeningal')) || (current_url() == base_url('Laporan/LaporanController/dataPendatang')) || (current_url() == base_url('Laporan/LaporanController/dataPindah')) ? 'menu-open' : '' ?>">
+						<a href="#" class="nav-link">
+							<i class="nav-icon fas fa-book"></i>
+							<p>
+								Kelola Laporan
+								<i class="right fas fa-angle-left"></i>
+							</p>
+						</a>
+						<ul class="nav nav-treeview">
+							<li class="nav-item">
+								<a href="<?= base_url('Laporan/LaporanController') ?>" class="nav-link <?= (current_url() == base_url('Laporan/LaporanController')) ? 'active' : '' ?>">
+									<i class="far fa-circle nav-icon"></i>
+									<p>Laporan Penduduk</p>
+								</a>
+							</li>
+						</ul>
+					</li>
+				<?php endif; ?>
+
+				<?php if ($userLogin['roles'] == 1) : ?>
+					<li class="nav-header">Administrator</li>
+					<li class="nav-item">
+						<a href="<?= base_url('AdministratorController') ?>" class="nav-link <?= (current_url() == base_url('AdministratorController')) ? 'active' : '' ?>">
+							<i class="nav-icon fas fa-user-cog"></i>
+							<p>
+								Administrator
+							</p>
+						</a>
+					</li>
+				<?php endif; ?>
 
 				<li class="nav-header">Action</li>
 				<li class="nav-item">
@@ -162,6 +130,7 @@
 						</p>
 					</a>
 				</li>
+
 				<li class="nav-item">
 					<a href="<?= base_url('AuthController/logout') ?>" onclick="return confirm('Apakah Anda Inggin Keluar.??')" class="nav-link">
 						<i class="nav-icon fas fa-sign-out-alt"></i>
@@ -170,6 +139,7 @@
 						</p>
 					</a>
 				</li>
+
 			</ul>
 		</nav>
 	</div>

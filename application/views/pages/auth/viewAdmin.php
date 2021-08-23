@@ -47,7 +47,15 @@
 													<?php foreach ($getAdmin as $data) : ?>
 														<tr>
 															<td class="text-center"><?= $no++ ?></td>
-															<td><?= $data['nama']; ?></td>
+															<td><?= $data['nama']; ?> |
+																<?php if ($data['roles'] == 1) { ?>
+																	<a class="text-primary">Admin</a>
+																<?php } else if ($data['roles'] == 2) { ?>
+																	<a class="text-primary">Camat</a>
+																<?php } else if ($data['roles'] == 3) { ?>
+																	<a class="text-primary">Petugas</a>
+																<?php } ?>
+															</td>
 															<td><?= $data['alamat']; ?></td>
 															<td class="text-center">
 																<img src="<?= base_url('/assets/assetGambar/administrator/') . $data['foto'] ?>" alt="administrator" width="40px">

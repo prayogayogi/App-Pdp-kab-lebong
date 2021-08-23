@@ -22,9 +22,6 @@
 					<div class="card">
 						<div class="card-header">
 							<h3 class="card-title">Table Data Penduduk</h3>
-							<div class="status mt-5">
-								<?= $this->session->flashdata('status'); ?>
-							</div>
 						</div>
 						<div class="card-body">
 							<div class="row">
@@ -110,16 +107,16 @@
 										<label for="tempat_tgl">Tempat Tgl Lahir</label>
 										<input type="text" name="tempat_tgl" class="form-control" id="tempat_tgl" placeholder="Masukan Tempat Tgl Lahir">
 									</div>
-								</div>
-								<div class="col">
 									<div class="form-group">
 										<label for="tgl_lahir">Tgl Lahir</label>
 										<input type="date" name="tgl_lahir" class="form-control" id="tgl_lahir" placeholder="Masukan Tgl Lahir">
 									</div>
+								</div>
+								<div class="col">
 									<div class="form-group">
 										<label for="jenis_kelamin">Jenis Kelamin</label>
 										<select class="custom-select" name="jenis_kelamin" id="jenis_kelamin">
-											<option selected>-- Jenis Kelamin --</option>
+											<option>-- Jenis Kelamin --</option>
 											<option value="LAKI-LAKI">Laki-laki</option>
 											<option value="PEREMPUAN">Perempuan</option>
 										</select>
@@ -127,6 +124,15 @@
 									<div class="form-group">
 										<label for="alamat">Alamat</label>
 										<input type="text" name="alamat" class="form-control" id="alamat" placeholder="Masukan Alamat">
+									</div>
+									<div class="form-group">
+										<label for="status_keluarga">Setatus Di Keluarga</label>
+										<select class="custom-select" name="status_keluarga" id="status_keluarga">
+											<option>-- Setatus Di Keluarga --</option>
+											<option value="KEPALA KELUARGA">Kepala Keluarga</option>
+											<option value="IBU">Ibu</option>
+											<option value="ANAK">Anak</option>
+										</select>
 									</div>
 									<div class="form-group">
 										<label for="pekerjaan">Pekerjaan</label>
@@ -233,6 +239,8 @@
 						<dl class="row justify-content-center">
 							<dt class="col-sm-6">Nama</dt>
 							<dd class="col-sm-6">: <?= $data['nama']; ?></dd>
+							<dt class="col-sm-6">Staus Keluarga</dt>
+							<dd class="col-sm-6">: <?= $data['status_keluarga']; ?></dd>
 							<dt class="col-sm-6">Alamat</dt>
 							<dd class="col-sm-6">: <?= $data['alamat']; ?></dd>
 							<dt class="col-sm-6">Nama Desa</dt>
